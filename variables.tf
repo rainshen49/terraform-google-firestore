@@ -202,3 +202,8 @@ variable "field_configuration" {
   }
 }
 
+variable "ruleset" {
+  description = "Name of the google_firebaserules_ruleset to be used by this Firestore database"
+  type        = string
+  default     = ""
+}

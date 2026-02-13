@@ -34,7 +34,7 @@ docker_run:
 # Execute prepare tests within the docker container
 .PHONY: docker_test_prepare
 docker_test_prepare:
-	docker run --rm -it \
+	podman run --rm -it \
 		-e SERVICE_ACCOUNT_JSON \
 		-e TF_VAR_org_id \
 		-e TF_VAR_folder_id \

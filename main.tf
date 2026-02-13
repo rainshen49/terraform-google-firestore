@@ -119,3 +119,11 @@ resource "google_firestore_field" "firestore_field" {
     }
   }
 }
+
+resource "google_firebaserules_release" "firestore" {
+  count   = var.ruleset == "" ? 0 : 1
+  project = var.project_id
+
+  name         = var.database_id == "(default)" ? "cloud.firestore" : "cloud.firestore/${var.database_id}"
+  ruleset_name = var.ruleset
+}

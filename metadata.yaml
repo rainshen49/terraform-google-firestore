@@ -133,6 +133,10 @@ spec:
               array_index_query_scope      = optional(set(string), [])
             }))
         defaultValue: []
+      - name: ruleset
+        description: Name of the google_firebaserules_ruleset to be used by this Firestore database
+        varType: string
+        defaultValue: ""
     outputs:
       - name: composite_index_ids
         description: List of composite indices for the firestore database.
@@ -167,6 +171,7 @@ spec:
       - storage-api.googleapis.com
       - serviceusage.googleapis.com
       - firestore.googleapis.com
+      - firebaserules.googleapis.com
     providerVersions:
       - source: hashicorp/google
-        version: ">= 3.53, < 7"
+        version: ">= 4.0, < 7"

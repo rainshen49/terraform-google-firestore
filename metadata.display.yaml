@@ -95,3 +95,6 @@ spec:
         project_id:
           name: project_id
           title: Project Id
+        ruleset:
+          name: ruleset
+          title: Security Ruleset
